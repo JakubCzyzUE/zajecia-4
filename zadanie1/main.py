@@ -13,7 +13,7 @@ class Student:
         self.marks = marks
 
 
-    def is_passed(self):
+    def is_passed(self) -> bool:
         print(self.name)
         if(self.marks > 50):
             print("ocena" + self.name + "studenta jest większa niż 50")
