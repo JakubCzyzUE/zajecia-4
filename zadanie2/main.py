@@ -36,6 +36,8 @@ class Employee:
     def __str__(self) -> str:
         return f'dane pracownika:  Imie: {self.first_name} Nazwisko: {self.last_name} Data zatrudnienia: {self.hire_date} Data urodzenia: {self.birth_date}' \
                f' Miasto: {self.city} Ulica: {self.street} Kod pocztowy: {self.zip_code} telefon kontaktowy: {self.phone}'
+
+
 class Book:
     def __init__(self, library: str, publication_date: str, author_name: str, author_surname: str,
                  number_of_pages: int):
@@ -49,13 +51,15 @@ class Book:
         return f'dane książki:  biblioteka: {self.library}, data publikacji: {self.publication_date}, imie autora: {self.author_name}' \
                f' nazwisko autora: {self.author_surname}, liczba stron: {self.number_of_pages}'
 
-    l1 = Library('Katowice', 'Szkolna', '40-000', 'od 8 do 20', 732332132)
-    print(l1.__str__())
 
-    o1 = Order("K.Nowak", "Jacek Kowalski", "Księga Dżungli, Harry Potter", "10.10.2021")
-    print(o1.__str__())
+l1 = Library('Katowice', 'Szkolna', '40-000', 'od 8 do 20', 732332132)
+print(l1.__str__())
 
-    e1 = Employee("Jarek", "Nowak", "10.12.2019", "10.01.1994", "Katowice", "Bogucicka", "40-000", 730321123)
-    print(e1.__str__())
+o1 = Order("K.Nowak", "Jacek Kowalski", "Księga Dżungli, Harry Potter", "10.10.2021")
+print(o1.__str__())
 
-    b1 = Book("Katowice","10.10.1990","John","Doe",100)
+e1 = Employee("Jarek", "Nowak", "10.12.2019", "10.01.1994", "Katowice", "Bogucicka", "40-000", 730321123)
+print(e1.__str__())
+
+b1 = Book("Katowice","10.10.1990","John","Doe",100)
+print(b1.__str__())
