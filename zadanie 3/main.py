@@ -14,12 +14,10 @@ class Property:
                f' adress: {self.address}.'
 
 class House(Property):
-    def __init__(self,area: str, rooms: int, price: str, address: str, plot: int):
-        self.area = area
-        self.rooms = rooms
-        self.price = price
-        self.address = address
+    def __init__(self, area, rooms, price, address, plot):
+        super().__init__(area,rooms,price,address)
         self.plot = plot
+
     def __str__(self)->str:
         return f'HOUSE' \
                f' area: {self.area},' \
@@ -29,12 +27,10 @@ class House(Property):
                f' plot: {self.plot}m2.'
 
 class Flat(Property):
-    def __init__(self,area: str, rooms: int, price: str, address: str, floor: str):
-        self.area = area
-        self.rooms = rooms
-        self.price = price
-        self.address = address
+    def __init__(self,area, rooms, price, address, floor):
+        super().__init__(area,rooms,price,address)
         self.floor = floor
+
     def __str__(self)->str:
         return f'FLAT' \
                f' area: {self.area},' \
